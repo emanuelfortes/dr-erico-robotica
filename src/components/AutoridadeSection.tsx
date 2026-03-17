@@ -1,3 +1,6 @@
+import drErico from "../assets/dr-erico.jpg";
+import bgImage from "../assets/bf-autoridade.jpg";
+
 const formacao = [
   "Fellowship em Cirurgia Robótica – Hospital Israelita Albert Einstein",
   "Residência Médica – Hospital Geral de Fortaleza (HGF)",
@@ -11,79 +14,201 @@ const diferenciais = [
   "Uso das tecnologias mais modernas disponíveis",
 ];
 
+const montserrat: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" };
+
 const CheckIcon = () => (
-  <svg className="w-5 h-5 text-[#f5c518] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    style={{ width: 20, height: 20, color: "#f5c518", flexShrink: 0, marginTop: 2 }}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <polyline points="20 6 9 17 4 12" />
   </svg>
 );
 
 const AutoridadeSection = () => (
-  <section id="sobre" className="bg-[#0f1f3d] py-24 px-6 lg:px-16">
-    <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+  <section
+    id="sobre"
+    style={{
+      ...montserrat,
+      position: "relative",
+      padding: "96px 24px",
+      overflow: "hidden",
+    }}
+  >
+    {/* Background image */}
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        zIndex: 0,
+      }}
+    />
 
-      {/* LEFT: image + accent */}
-      <div className="relative">
+    {/* Overlay escuro para o conteúdo ficar legível */}
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        background: "rgba(10, 22, 40, 0.82)",
+        zIndex: 1,
+      }}
+    />
+
+    {/* Conteúdo */}
+    <div
+      style={{
+        position: "relative",
+        zIndex: 2,
+        maxWidth: 1152,
+        margin: "0 auto",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gap: "80px",
+        alignItems: "center",
+      }}
+    >
+      {/* ── LEFT: foto ── */}
+      <div style={{ position: "relative" }}>
         <div
-          className="w-full rounded-3xl flex items-center justify-center overflow-hidden"
-          style={{ aspectRatio: "4/5", background: "linear-gradient(135deg, #162447 0%, #0a1628 100%)" }}
+          style={{
+            width: "100%",
+            aspectRatio: "4/5",
+            borderRadius: "24px",
+            overflow: "hidden",
+            background: "linear-gradient(135deg, #162447 0%, #0a1628 100%)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <svg className="w-[60%] opacity-25" viewBox="0 0 200 280" fill="none">
-            <ellipse cx="100" cy="60" rx="45" ry="55" fill="white" />
-            <path d="M10 280 C10 180 40 160 100 155 C160 160 190 180 190 280Z" fill="white" />
-            <rect x="75" y="130" width="50" height="40" rx="4" fill="white" fillOpacity="0.6" />
-          </svg>
+          <img
+            src={drErico}
+            alt="Dr. Érico Diógenes – Urologista em Fortaleza"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "top center",
+              display: "block",
+            }}
+          />
         </div>
-        {/* Gold accent */}
-        <div className="absolute -bottom-5 -right-5 w-44 h-44 rounded-2xl bg-[#f5c518] flex flex-col items-center justify-center gap-1 shadow-[0_20px_60px_rgba(245,197,24,0.3)]">
-          <span className="font-serif text-[#0a1628] text-5xl font-black leading-none">21</span>
-          <span className="text-[#0a1628] text-[0.68rem] font-bold uppercase tracking-wide text-center px-3">
+
+        {/* Badge dourado */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: -20,
+            right: -20,
+            width: 160,
+            height: 160,
+            borderRadius: 16,
+            background: "#f5c518",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 4,
+            boxShadow: "0 20px 60px rgba(245,197,24,0.3)",
+          }}
+        >
+          <span style={{ color: "#0a1628", fontSize: 52, fontWeight: 900, lineHeight: 1, ...montserrat }}>
+            21
+          </span>
+          <span
+            style={{
+              color: "#0a1628",
+              fontSize: 10,
+              fontWeight: 700,
+              textTransform: "uppercase",
+              letterSpacing: "0.12em",
+              textAlign: "center",
+              padding: "0 12px",
+              ...montserrat,
+            }}
+          >
             anos de experiência
           </span>
         </div>
       </div>
 
-      {/* RIGHT: copy */}
+      {/* ── RIGHT: copy ── */}
       <div>
-        <span className="text-[#f5c518] text-[0.72rem] font-semibold tracking-[0.14em] uppercase block mb-4">
+        <span
+          style={{
+            color: "#f5c518",
+            fontSize: 11,
+            fontWeight: 700,
+            letterSpacing: "0.14em",
+            textTransform: "uppercase",
+            display: "block",
+            marginBottom: 16,
+            ...montserrat,
+          }}
+        >
           Quem cuidará de você
         </span>
 
-        {/* H2 — SEO */}
-        <h2 className="font-serif text-3xl lg:text-4xl font-black text-white leading-tight mb-3">
+        <h2
+          style={{
+            fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+            fontWeight: 900,
+            color: "#fff",
+            lineHeight: 1.25,
+            marginBottom: 12,
+            ...montserrat,
+          }}
+        >
           Dr. Érico Diógenes –{" "}
-          <span className="text-[#f5c518]">Urologista em Fortaleza</span> referência em
-          cirurgia robótica
+          <span style={{ color: "#f5c518" }}>Urologista em Fortaleza</span>{" "}
+          referência em cirurgia robótica
         </h2>
 
-        <p className="text-white/80 font-semibold mb-6 text-sm">
+        <p style={{ color: "rgba(255,255,255,0.85)", fontWeight: 600, fontSize: 13, marginBottom: 20, ...montserrat }}>
           Uma trajetória dedicada à excelência urológica.
         </p>
 
-        <p className="text-[#8a9bb5] text-sm leading-relaxed mb-6">
-          Com mais de <strong className="text-white">21 anos de experiência</strong>, o Dr.
-          Érico Diógenes é reconhecido como um dos principais nomes da urologia em Fortaleza.
-          Sua formação reúne instituições de alto prestígio:
+        <p style={{ color: "#8a9bb5", fontSize: 13, lineHeight: 1.7, marginBottom: 24, ...montserrat }}>
+          Com mais de{" "}
+          <strong style={{ color: "#fff" }}>21 anos de experiência</strong>, o Dr. Érico
+          Diógenes é reconhecido como um dos principais nomes da urologia em Fortaleza. Sua
+          formação reúne instituições de alto prestígio:
         </p>
 
         {/* Formação */}
-        <ul className="flex flex-col gap-3 mb-8">
+        <ul style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 28, padding: 0, listStyle: "none" }}>
           {formacao.map((f) => (
-            <li key={f} className="flex items-start gap-3 text-white/75 text-sm leading-snug">
+            <li
+              key={f}
+              style={{ display: "flex", alignItems: "flex-start", gap: 12, color: "rgba(255,255,255,0.75)", fontSize: 13, lineHeight: 1.5, ...montserrat }}
+            >
               <CheckIcon />
               {f}
             </li>
           ))}
         </ul>
 
-        <p className="text-[#8a9bb5] text-sm leading-relaxed mb-5">
+        <p style={{ color: "#8a9bb5", fontSize: 13, lineHeight: 1.7, marginBottom: 16, ...montserrat }}>
           Seu diferencial vai além da técnica:
         </p>
 
         {/* Diferenciais */}
-        <ul className="flex flex-col gap-3">
+        <ul style={{ display: "flex", flexDirection: "column", gap: 12, padding: 0, listStyle: "none" }}>
           {diferenciais.map((d) => (
-            <li key={d} className="flex items-center gap-3 text-white font-medium text-sm">
-              <span className="text-[#f5c518] text-base leading-none">›</span>
+            <li
+              key={d}
+              style={{ display: "flex", alignItems: "center", gap: 12, color: "#fff", fontWeight: 600, fontSize: 13, ...montserrat }}
+            >
+              <span style={{ color: "#f5c518", fontSize: 18, lineHeight: 1 }}>›</span>
               {d}
             </li>
           ))}

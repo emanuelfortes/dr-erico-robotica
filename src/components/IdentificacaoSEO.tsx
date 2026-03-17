@@ -1,4 +1,4 @@
-import imgFoto from "../assets/robotica.jpg";
+import imgFoto from "../assets/dr-erico-urologista.jpg";
 
 export default function IdentificacaoSEO() {
   return (
@@ -16,19 +16,10 @@ export default function IdentificacaoSEO() {
       />
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_520px] gap-6 lg:gap-12 items-center">
 
-          {/* FOTO — esquerda no desktop, baixo no mobile */}
-          <div className="flex justify-center lg:block order-2 lg:order-1">
-            <img
-              src={imgFoto}
-              alt="Dr. Érico Diógenes — Urologista em Fortaleza"
-              className="w-56 sm:w-72 lg:w-full max-w-sm rounded-2xl object-cover object-top aspect-[3/4]"
-            />
-          </div>
-
-          {/* CONTEÚDO — direita no desktop, cima no mobile */}
-          <div className="order-1 lg:order-2">
+          {/* CONTEÚDO — esquerda */}
+          <div className="order-1">
 
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black leading-[1.15] text-white mb-5">
               Procurando um urologista em Fortaleza com{" "}
@@ -67,6 +58,16 @@ export default function IdentificacaoSEO() {
             </div>
 
           </div>
+
+          {/* FOTO — direita, maior */}
+          <div className="flex justify-center lg:block order-2">
+            <img
+              src={imgFoto}
+              alt="Dr. Érico Diógenes — Urologista em Fortaleza"
+              className="w-72 sm:w-96 lg:w-full rounded-2xl object-cover object-top aspect-[3/4]"
+            />
+          </div>
+
         </div>
       </div>
     </section>

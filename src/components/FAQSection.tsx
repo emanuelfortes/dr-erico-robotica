@@ -23,18 +23,22 @@ const faqs = [
   },
 ];
 
+const montserrat: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" };
+
 const FAQSection = () => {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-[#0f1f3d] py-24 px-6 lg:px-16">
+    <section id="faq" className="bg-[#0f1f3d] py-24 px-6 lg:px-16" style={montserrat}>
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-14">
           <div className="w-12 h-[3px] bg-[#f5c518] mx-auto mb-8" />
-          {/* H2 */}
-          <h2 className="font-serif text-3xl lg:text-4xl font-black text-white leading-tight">
+          <h2
+            className="text-3xl lg:text-4xl font-black text-white leading-tight"
+            style={montserrat}
+          >
             Dúvidas frequentes sobre
             <br />
             <span className="text-[#f5c518]">cirurgia robótica</span>
@@ -56,9 +60,10 @@ const FAQSection = () => {
               >
                 <button
                   className="w-full flex items-center justify-between gap-4 px-7 py-5 text-left"
+                  style={montserrat}
                   onClick={() => setOpen(isOpen ? null : i)}
                 >
-                  <span className="font-semibold text-white text-[0.96rem]">
+                  <span className="font-semibold text-white text-[0.96rem]" style={montserrat}>
                     {faq.question}
                   </span>
                   <span
@@ -77,7 +82,7 @@ const FAQSection = () => {
                     isOpen ? "max-h-48 pb-5" : "max-h-0"
                   }`}
                 >
-                  <p className="px-7 text-[#8a9bb5] text-sm leading-relaxed">
+                  <p className="px-7 text-[#8a9bb5] text-sm leading-relaxed" style={montserrat}>
                     {faq.answer}
                   </p>
                 </div>
