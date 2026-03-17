@@ -1,26 +1,73 @@
+import imgFoto from "../assets/robotica.jpg";
+
 export default function IdentificacaoSEO() {
   return (
-    <section className="identificacao">
-      <div className="container">
+    <section
+      className="relative py-16 lg:py-24 bg-[#071120] overflow-hidden"
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
+    >
+      {/* Glow sutil */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,197,24,0.04) 0%, transparent 70%)",
+        }}
+      />
 
-        <h2>
-          Procurando um urologista em Fortaleza com alta tecnologia e confiança?
-        </h2>
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        <p>
-          Se você está buscando um urologista em Fortaleza para tratar sua condição com segurança e o que há de mais moderno na medicina, provavelmente está preocupado com:
-        </p>
+          {/* FOTO — esquerda no desktop, baixo no mobile */}
+          <div className="flex justify-center lg:block order-2 lg:order-1">
+            <img
+              src={imgFoto}
+              alt="Dr. Érico Diógenes — Urologista em Fortaleza"
+              className="w-56 sm:w-72 lg:w-full max-w-sm rounded-2xl object-cover object-top aspect-[3/4]"
+            />
+          </div>
 
-        <ul>
-          <li>Dor no pós-operatório</li>
-          <li>Tempo de recuperação</li>
-          <li>Riscos de sequelas</li>
-          <li>Escolher o profissional certo</li>
-        </ul>
+          {/* CONTEÚDO — direita no desktop, cima no mobile */}
+          <div className="order-1 lg:order-2">
 
-        <p>E essa preocupação é totalmente válida.</p>
-        <p>A escolha do especialista impacta diretamente no seu resultado.</p>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black leading-[1.15] text-white mb-5">
+              Procurando um urologista em Fortaleza com{" "}
+              <em className="not-italic text-[#f5c518]">
+                alta tecnologia e confiança?
+              </em>
+            </h2>
 
+            <p className="text-white/60 text-sm leading-relaxed mb-7">
+              Se você está buscando um urologista em Fortaleza para tratar sua condição com segurança e o que há de mais moderno na medicina, provavelmente está preocupado com:
+            </p>
+
+            <ul className="space-y-3 mb-7">
+              {[
+                "Dor no pós-operatório",
+                "Tempo de recuperação",
+                "Riscos de sequelas",
+                "Escolher o profissional certo",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#f5c518]/10 border border-[#f5c518]/30 flex items-center justify-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#f5c518]" />
+                  </span>
+                  <span className="text-white font-semibold text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="border-t border-white/[0.08] pt-7 space-y-2">
+              <p className="text-white font-bold text-base leading-snug">
+                E essa preocupação é totalmente válida.
+              </p>
+              <p className="text-white/60 text-sm leading-relaxed">
+                A escolha do especialista impacta diretamente no seu resultado.
+              </p>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
   );

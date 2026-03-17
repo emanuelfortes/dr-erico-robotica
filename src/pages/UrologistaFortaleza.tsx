@@ -1,27 +1,23 @@
-import SeoHead from "../seo/SeoHead";
-import HeroSection from "../components/HeroSection";
-import IdentificacaoSEO from "../components/IdentificacaoSEO";
-import SolucaoSection from "../components/SolucaoSection";
-import AutoridadeSection from "../components/AutoridadeSection";
-import ProvaSocialSection from "../components/ProvaSocialSection";
-import FAQSection from "../components/FAQSection";
-import CTASection from "../components/CTASection";
 
-export default function UrologistaFortaleza() {
-  return (
-    <>
-      <SeoHead
-        title="Urologista em Fortaleza com Tecnologia de Cirurgia Robótica Avançada"
-        description="Atendimento com o Dr. Érico Diógenes, referência em urologia em Fortaleza, com foco em precisão, recuperação rápida e segurança máxima."
-      />
+import HeroSection        from "../components/HeroSection";        // 1️⃣ Headline
+import IdentificacaoSEO   from "../components/IdentificacaoSEO";   // 2️⃣ Identificação + SEO
+import SolucaoSection     from "../components/SolucaoSection";     // 3️⃣ Solução
+import AutoridadeSection  from "../components/AutoridadeSection";  // 4️⃣ Autoridade
+import ProvaSocialSection from "../components/ProvaSocialSection"; // 5️⃣ Prova Social
+import FAQSection         from "../components/FAQSection";         // 6️⃣ Quebra de Objeções
+import { CTAFinalSection, Footer } from "../components/CTAFinalSection";
 
-      <HeroSection />
-      <IdentificacaoSEO />
-      <SolucaoSection />
-      <AutoridadeSection />
-      <ProvaSocialSection />
-      <FAQSection />
-      <CTASection />
-    </>
-  );
-}
+const UrologistaFortaleza = () => (
+  <div className="font-sans bg-[#0a1628] text-white overflow-x-hidden">
+    <HeroSection />
+    <IdentificacaoSEO />
+    <SolucaoSection />
+    <AutoridadeSection />
+    <ProvaSocialSection />
+    <FAQSection />
+    <CTAFinalSection />
+    <Footer />
+  </div>
+);
+
+export default UrologistaFortaleza;
