@@ -1,8 +1,8 @@
 import WhatsAppIcon from "./WhatsAppIcon";
 import { WA_LINK } from "../constants";
 import imgLogo from "../assets/logo_1.png";
-import imgBg from "../assets/dr-erico-rob-1.jpg";
-import imgBgMobile from "../assets/dr-erico-rob-1.jpg";
+import imgBg from "../assets/dr-erico-rob-1.webp";
+import imgBgMobile from "../assets/dr-erico-rob-1.webp";
 
 const HeroSection = () => (
   <section
