@@ -12,23 +12,23 @@ const HeroSection = () => (
   >
 
     {/* ============================================================
-        MOBILE: foto em cima + texto embaixo (empilhado)
+        MOBILE: foto em cima + texto embaixo
     ============================================================ */}
     <div className="flex flex-col lg:hidden">
 
-      {/* Foto — ocupa topo */}
-      <div className="relative w-full overflow-hidden" style={{ height: "52vw", minHeight: 220, maxHeight: 420 }}>
+      {/* Foto — altura maior para o doutor aparecer bem */}
+      <div className="relative w-full overflow-hidden" style={{ height: "75vw", minHeight: 300, maxHeight: 560 }}>
         <img
           src={imgBgMobile}
           alt="Dr. Érico Diógenes com robô cirúrgico"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 15%" }}
         />
-        {/* Degradê embaixo da foto para transição suave */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[#071120]" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-[#071120]" />
       </div>
 
       {/* Texto */}
-      <div className="px-6 sm:px-10 pt-6 pb-12">
+      <div className="px-6 sm:px-10 pt-4 pb-12">
 
         <div className="mb-5">
           <img src={imgLogo} alt="Dr. Érico Diógenes — Urologista" className="h-10 sm:h-12 w-auto" />
@@ -44,15 +44,12 @@ const HeroSection = () => (
 
         <h1 className="text-[1.75rem] sm:text-3xl font-black leading-[1.15] mb-4 text-white">
           Urologista em Fortaleza com{" "}
-          <em className="not-italic text-white">
-            Tecnologia de Cirurgia Robótica Avançada
-          </em>
+          <em className="not-italic">Tecnologia de Cirurgia Robótica Avançada</em>
         </h1>
 
         <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-7 max-w-lg">
-          Atendimento com o{" "}
-          <strong className="text-white">Dr. Érico Diógenes</strong>, referência em urologia em
-          Fortaleza, com foco em{" "}
+          Atendimento com o <strong className="text-white">Dr. Érico Diógenes</strong>, referência
+          em urologia em Fortaleza, com foco em{" "}
           <strong className="text-white">precisão, recuperação rápida e segurança máxima.</strong>
         </p>
 
@@ -91,11 +88,12 @@ const HeroSection = () => (
 
     {/* ============================================================
         DESKTOP: dois painéis lado a lado (texto | foto)
+        Texto ocupa 42%, foto ocupa 58% — avança mais para a esquerda
     ============================================================ */}
     <div className="hidden lg:flex min-h-screen">
 
       {/* Painel esquerdo — texto */}
-      <div className="flex flex-col justify-center w-[52%] px-16 py-20">
+      <div className="flex flex-col justify-center w-[42%] px-16 py-20 shrink-0">
 
         <div className="mb-10">
           <img src={imgLogo} alt="Dr. Érico Diógenes — Urologista" className="h-14 w-auto" />
@@ -109,17 +107,14 @@ const HeroSection = () => (
           Urologista em Fortaleza
         </div>
 
-        <h1 className="text-3xl font-black leading-[1.15] mb-6 text-white max-w-[480px]">
+        <h1 className="text-3xl font-black leading-[1.15] mb-6 text-white">
           Urologista em Fortaleza com{" "}
-          <em className="not-italic text-white">
-            Tecnologia de Cirurgia Robótica Avançada
-          </em>
+          <em className="not-italic">Tecnologia de Cirurgia Robótica Avançada</em>
         </h1>
 
-        <p className="text-white/60 text-sm leading-relaxed mb-10 max-w-lg">
-          Atendimento com o{" "}
-          <strong className="text-white">Dr. Érico Diógenes</strong>, referência em urologia em
-          Fortaleza, com foco em{" "}
+        <p className="text-white/60 text-sm leading-relaxed mb-10 max-w-md">
+          Atendimento com o <strong className="text-white">Dr. Érico Diógenes</strong>, referência
+          em urologia em Fortaleza, com foco em{" "}
           <strong className="text-white">precisão, recuperação rápida e segurança máxima.</strong>
         </p>
 
@@ -155,13 +150,15 @@ const HeroSection = () => (
         </div>
       </div>
 
-      {/* Painel direito — foto */}
-      <div className="relative flex-1 overflow-hidden">
-        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#071120] to-transparent z-10 pointer-events-none" />
+      {/* Painel direito — foto ocupa 58%, avança para a esquerda com margem negativa */}
+      <div className="relative flex-1 overflow-hidden -ml-16">
+        {/* Degradê à esquerda para fundir suavemente com o texto */}
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#071120] to-transparent z-10 pointer-events-none" />
         <img
           src={imgBg}
           alt="Dr. Érico Diógenes com robô cirúrgico"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "30% center" }}
         />
       </div>
 
