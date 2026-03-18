@@ -1,10 +1,6 @@
 import GoogleReviews from "./GoogleReviews";
 const montserrat = { fontFamily: "'Montserrat', sans-serif" };
 
-const Stars = () => (
-  <div className="flex gap-0.5 text-[#f5c518] text-base mb-4">★★★★★</div>
-);
-
 const ProvaSocialSection = () => (
   <section id="prova-social" className="bg-[#0a1628] py-24 px-6 lg:px-16">
     <div className="max-w-6xl mx-auto">
@@ -23,8 +19,7 @@ const ProvaSocialSection = () => (
             · Avaliação média Google
           </span>
         </div>
-      </div>     
-      {/* GoogleReviews agora dentro do container centralizado */}
+      </div>
       <div className="mt-10">
         <GoogleReviews placeId="ChIJ-RHmBn5IxwcRyI2kNHjMWKA" />
       </div>
