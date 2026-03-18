@@ -24,7 +24,9 @@ const ProvaSocialSection = () => (
         <GoogleReviews placeId="ChIJ-RHmBn5IxwcRyI2kNHjMWKA" />
       </div>
     </div>
+    
   </section>
+
 );
 
 export default ProvaSocialSection;
