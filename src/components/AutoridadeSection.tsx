@@ -54,9 +54,9 @@ const AutoridadeSection = () => (
         {/* Badge */}
         <div
           data-aos="zoom-in" data-aos-delay="400"
-          style={{ position: "absolute", bottom: -20, right: -20, width: 160, height: 160, borderRadius: 16, background: "#f5c518", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4, boxShadow: "0 20px 60px rgba(245,197,24,0.3)" }}
+          style={{ position: "absolute", bottom: -20, right: -20, width: 100, height: 100, borderRadius: 16, background: "#f5c518", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4, boxShadow: "0 20px 60px rgba(245,197,24,0.3)" }}
         >
-          <span style={{ color: "#0a1628", fontSize: 52, fontWeight: 900, lineHeight: 1, ...montserrat }}>21</span>
+          <span style={{ color: "#0a1628", fontSize: 50, fontWeight: 900, lineHeight: 1, ...montserrat }}>21</span>
           <span style={{ color: "#0a1628", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", textAlign: "center", padding: "0 12px", ...montserrat }}>
             anos de experiência
           </span>
