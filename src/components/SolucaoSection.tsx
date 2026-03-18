@@ -142,7 +142,7 @@ const SolucaoSection = () => (
 
       {/* LEFT: cards — aparece segundo no mobile */}
       <div className="order-2 lg:order-1" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-        <div style={cardStyle}>
+        <div style={cardStyle} data-aos="fade-right" data-aos-delay="500">
           <h3 style={{ color: "#ffffff", fontWeight: 700, fontSize: "1.2rem", marginBottom: "0.5rem" }}>
             Visão 3d ampliada + instrumentos articulados
           </h3>
@@ -152,7 +152,7 @@ const SolucaoSection = () => (
           </p>
         </div>
 
-        <div style={cardStyle}>
+        <div style={cardStyle} data-aos="fade-right" data-aos-delay="700">
           <h3 style={{ color: "#ffffff", fontWeight: 700, fontSize: "1.2rem", marginBottom: "0.5rem" }}>
             Movimentos extremamente precisos
           </h3>
@@ -161,7 +161,7 @@ const SolucaoSection = () => (
           </p>
         </div>
 
-        <div style={cardStyle}>
+        <div style={cardStyle} data-aos="fade-right" data-aos-delay="900">
           <h3 style={{ color: "#ffffff", fontWeight: 700, fontSize: "1.2rem", marginBottom: "0.5rem" }}>
             Controle total do cirurgião
           </h3>
